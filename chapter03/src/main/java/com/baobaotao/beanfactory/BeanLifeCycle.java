@@ -9,7 +9,7 @@ import org.springframework.core.io.Resource;
 
 public class BeanLifeCycle {
     private static void LifeCycleInBeanFactory(){
- 	   Resource res = new ClassPathResource("com/com.baobaotao/beanfactory/beans.xml");
+ 	   Resource res = new ClassPathResource("com/baobaotao/beanfactory/beans.xml");
        BeanFactory bf = new XmlBeanFactory(res);
        (new MyBeanFactoryPostProcessor()).postProcessBeanFactory((XmlBeanFactory)bf);
        //InstantiationAwareBeanPostProcessor
