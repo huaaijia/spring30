@@ -7,6 +7,8 @@ import com.baobaotao.domain.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.nio.file.FileSystemLoopException;
+
 @Service
 public class UserService {
     
@@ -17,6 +19,7 @@ public class UserService {
 	private LoginLogDao loginLogDao;
 
 	public boolean hasMatchUser(String userName, String password) {
+		System.out.println("in service");
 		int matchCount =userDao.getMatchCount(userName, password);
 		return matchCount > 0;
 	}

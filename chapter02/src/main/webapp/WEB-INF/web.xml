@@ -15,7 +15,7 @@
 	</listener>
 
 	<servlet>
-		<servlet-name>com.baobaotao</servlet-name>
+		<servlet-name>baobaotao</servlet-name>
 		<servlet-class>
 			org.springframework.web.servlet.DispatcherServlet
 		</servlet-class>
@@ -23,7 +23,7 @@
 	</servlet>
 
 	<servlet-mapping>
-		<servlet-name>com.baobaotao</servlet-name>
+		<servlet-name>baobaotao</servlet-name>
 		<url-pattern>*.html</url-pattern>
 	</servlet-mapping>
 

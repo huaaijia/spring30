@@ -20,7 +20,7 @@
     <bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource"
           destroy-method="close"
           p:driverClassName="com.mysql.jdbc.Driver"
-          p:url="jdbc:mysql://localhost:8889/sampledb"
+          p:url="jdbc:mysql://127.0.0.1:8889/sampledb"
           p:username="root"
           p:password="qqq111" />
 
@@ -36,7 +36,7 @@
     <!-- 通过AOP配置提供事务增强，让service包下所有Bean的所有方法拥有事务 -->
     <aop:config proxy-target-class="true">
         <aop:pointcut id="serviceMethod"
-                      expression=" execution(* com.com.baobaotao.service..*(..))" />
+                      expression=" execution(* com.baobaotao.service..*(..))" />
         <aop:advisor pointcut-ref="serviceMethod" advice-ref="txAdvice" />
     </aop:config>
     <tx:advice id="txAdvice" transaction-manager="transactionManager">
