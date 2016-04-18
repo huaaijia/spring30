@@ -13,14 +13,14 @@
        http://www.springframework.org/schema/aop/spring-aop-3.0.xsd">
 
     <!-- 扫描类包，将标注Spring注解的类自动转化Bean，同时完成Bean的注入 -->
-    <context:component-scan base-package="com.com.baobaotao.dao"/>
-    <context:component-scan base-package="com.com.baobaotao.service"/>
+    <context:component-scan base-package="com.baobaotao.dao"/>
+    <context:component-scan base-package="com.baobaotao.service"/>
 
     <!-- 配置数据源 -->
     <bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource"
           destroy-method="close"
           p:driverClassName="com.mysql.jdbc.Driver"
-          p:url="jdbc:mysql://localhost:3306/sampledb"
+          p:url="jdbc:mysql://localhost:8889/sampledb"
           p:username="root"
           p:password="qqq111" />
 
